@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Oscar Game</title>
+  </head>
+  <body>
+  <header>
+    <h1>Oscar Game 2018</h1>
+    <section class="scoreboard">
+      <div class = "scoreboardDavid">
+        <h2>David</h2>
+        <p class="davidScore">0</p>
+      </div>
+      <div class = "scoreboardErin">
+        <h2>Erin</h2>
+        <p class='erinScore'>0</p>
+      </div>
+    </section>
+  </header>
+
+  <main>
+
+      <div class="btn-group-vertical mr-2" role="group" aria-label="Second group">
+        <h2>Original Screenplay</h2>
+        <button onClick="reply_click(this.id); addScore()" id = "OStheBigSick" type="button" class="btn btn-secondary-picture">The Big Sick</button>
+        <button onClick="reply_click(this.id); addScore()" id = "OSthreeBillboards" type="button" class="btn btn-secondary-picture">Three Billboards</button>
+        <button onClick="reply_click(this.id); addScore()" id = "OStheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+        <button onClick="reply_click(this.id); addScore()" id = "OSgetOut" type="button" class="btn btn-secondary-picture">Get Out</button>
+        <button onClick="reply_click(this.id); addScore()" id = "OSladyBird" type="button" class="btn btn-secondary-picture">Lady Bird</button>
+
+          <h3><strong>David</strong></h3>
+          <h3>Prediction: The Shape of Water</h3>
+          <h3>Personal: The Shape of Water</h3>
+
+
+          <h3><strong>Erin</strong></h3>
+          <h3>Prediction: Lady Bird</h3>
+          <h3>Personal: The Big Sick</h3>
+
+      </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Adapted Screenplay</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "AScallMe" type="button" class="btn btn-secondary-picture">Call Me By Your Name</button>
+      <button onClick="reply_click(this.id); addScore()" id = "AStheDisasterArtist" type="button" class="btn btn-secondary-picture">The Disaster Artist</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASlogan" type="button" class="btn btn-secondary-picture">Logan</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASmollysGame" type="button" class="btn btn-secondary-picture">Molly's Game</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASmudbound" type="button" class="btn btn-secondary-picture">Mudbound</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Call Me by Your Name</h3>
+      <h3>Personal: Logan</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Call Me by Your Name</h3>
+      <h3>Personal: Logan</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Visual Effects</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "VEbladeRunner" type="button" class="btn btn-secondary-picture">Blade Runner 2049</button>
+      <button onClick="reply_click(this.id); addScore()" id = "VEguardians" type="button" class="btn btn-secondary-picture">The Disaster Artist</button>
+      <button onClick="reply_click(this.id); addScore()" id = "VEkong" type="button" class="btn btn-secondary-picture">Kong: Skull Island</button>
+      <button onClick="reply_click(this.id); addScore()" id = "VEstarWars" type="button" class="btn btn-secondary-picture">Star Wars the Last Jedi</button>
+      <button onClick="reply_click(this.id); addScore()" id = "VEapes" type="button" class="btn btn-secondary-picture">War for the Planet of the Apes</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: War for the Planet of the Apes</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Blade Runner 2049</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Sound Mixing</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SMbabyDriver" type="button" class="btn btn-secondary-picture">Baby Driver</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SMbladeRunner" type="button" class="btn btn-secondary-picture">Blade Runner</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SMdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SMtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SMstarWars" type="button" class="btn btn-secondary-picture">Star Wars: The Last Jedi</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Dunkirk</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Dunkirk</h3>
+      <h3>Personal: Baby Driver</h3>
+
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Sound Editing</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SEbabyDriver" type="button" class="btn btn-secondary-picture">Baby Driver</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SEbladeRunner" type="button" class="btn btn-secondary-picture">Blade Runner 2049</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SEdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SEtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SEstarWars" type="button" class="btn btn-secondary-picture">Star Wars: The Last Jedi</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Dunkirk</h3>
+      <h3>Personal: Baby Driver</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Dunkirk</h3>
+      <h3>Personal: The Shape of Water</h3>
+
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Short Film Live Action</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SFLAdekalb" type="button" class="btn btn-secondary-picture">DeKalb Elementary</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SFLAtheElevenOclock" type="button" class="btn btn-secondary-picture">The Eleven O'CLock</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SFLAmyNephewEmmett" type="button" class="btn btn-secondary-picture">My Nephew Emmett</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SFLAwatu" type="button" class="btn btn-secondary-picture">Watu Wote/All of Us</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SFLAtheSilentChild" type="button" class="btn btn-secondary-picture">The Silent Child</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: DeKalb Elementary</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: DeKalb Elementary</h3>
+      <h3>Personal: </h3>
+
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Short Film Animated</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "ASdearBasketballl" type="button" class="btn btn-secondary-picture">Dear Basketball</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASgardenParty" type="button" class="btn btn-secondary-picture">Garden Party</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASlou" type="button" class="btn btn-secondary-picture">Lou</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASnegativeSpace" type="button" class="btn btn-secondary-picture">Negative Space</button>
+      <button onClick="reply_click(this.id); addScore()" id = "ASrevoltingRhymes" type="button" class="btn btn-secondary-picture">Revolting Rhymes</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Lou</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Lou</h3>
+      <h3>Personal: </h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Production Design</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "PDbeautyAndTheBeast" type="button" class="btn btn-secondary-picture">Beauty and the Beast</button>
+      <button onClick="reply_click(this.id); addScore()" id = "PDdarkestHour" type="button" class="btn btn-secondary-picture">Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "PDtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "PDdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "PDbladeRunner" type="button" class="btn btn-secondary-picture">Blade Runner 2049</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Original Song</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SONGmightyRiver" type="button" class="btn btn-secondary-picture">"Mighty River" from Mudbound</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SONGrememberMe" type="button" class="btn btn-secondary-picture">"Remember Me" from Coco</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SONGthisIsMe" type="button" class="btn btn-secondary-picture">"This is Me" from The Greatest Showman</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SONGmysteryOfLove" type="button" class="btn btn-secondary-picture">"Mystery of Love" from Call Me By Your Name</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SONGstandUpForSomething" type="button" class="btn btn-secondary-picture">"Stand Up For Something" from Marshall</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Remember Me</h3>
+      <h3>Personal: Remember Me</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Remember Me</h3>
+      <h3>Personal: Remember Me</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Original Score</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SCOREdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SCOREtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SCOREthreeBillboards" type="button" class="btn btn-secondary-picture">Three Billboards</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SCOREphantomThread" type="button" class="btn btn-secondary-picture">Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SCOREstarWars" type="button" class="btn btn-secondary-picture">Star Wars: The Last Jedi</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: Star Wars: The Last Jedi</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: The Shape of Water</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Makeup and Hairstyling</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "MdarkestHour" type="button" class="btn btn-secondary-picture">Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Mwonder" type="button" class="btn btn-secondary-picture">Wonder</button>
+      <button onClick="reply_click(this.id); addScore()" id = "MvictoriaAndAlbert" type="button" class="btn btn-secondary-picture">Victoria and Albert</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Darkest Hour</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Darkest Hour</h3>
+      <h3>Personal: </h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Foreign Language Film</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "FLaFantasticWoman" type="button" class="btn btn-secondary-picture">A Fantastic Woman</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FLtheInsult" type="button" class="btn btn-secondary-picture">The Insult</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FLloveless" type="button" class="btn btn-secondary-picture">Loveless</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FLonBodyAndSoul" type="button" class="btn btn-secondary-picture">On Body and Soul</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FLtheSquare" type="button" class="btn btn-secondary-picture">The Square</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: The Insult</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: A Fantastic Woman</h3>
+      <h3>Personal: </h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Film Editing</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "FEbabyDriver" type="button" class="btn btn-secondary-picture">Baby Driver</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FEdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FEiTonya" type="button" class="btn btn-secondary-picture">I, Tonya</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FEtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "FEthreeBillboards" type="button" class="btn btn-secondary-picture">Three Billboards</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Dunkirk</h3>
+      <h3>Personal: The Shape of Water</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: The Shape of Water</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Documentary Short Subject</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "DSedithPlusEddie" type="button" class="btn btn-secondary-picture">Edith + Eddie</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DSheavenIsATrafficJam" type="button" class="btn btn-secondary-picture">Heaven Is a Traffic Jam on the 405</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DSkniveSkills" type="button" class="btn btn-secondary-picture">Knife Skills</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DSheroine" type="button" class="btn btn-secondary-picture">Heroin(e)</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DStrafficStop" type="button" class="btn btn-secondary-picture">Traffic Stop</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Traffic Stop</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Heroin(e)</h3>
+      <h3>Personal: </h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Documentary Feature</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "DFabacus" type="button" class="btn btn-secondary-picture">Abacus:Small Enough to Jail</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DFfacesPlaces" type="button" class="btn btn-secondary-picture">Faces Places</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DFicarus" type="button" class="btn btn-secondary-picture">Icarus</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DFaleppo" type="button" class="btn btn-secondary-picture">Last Men in Aleppo</button>
+      <button onClick="reply_click(this.id); addScore()" id = "DFstrongIsland" type="button" class="btn btn-secondary-picture">Strong Island</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Last Men in Aleppo</h3>
+      <h3>Personal: </h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Icarus</h3>
+      <h3>Personal: </h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Direction</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "Dnolan" type="button" class="btn btn-secondary-picture">Christopher Nolan: Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Dpeele" type="button" class="btn btn-secondary-picture">Jordan Peele: Get Out</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Dgerwig" type="button" class="btn btn-secondary-picture">Greta Gerwig: Lady Bird</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Dpta" type="button" class="btn btn-secondary-picture">Paul Thomas Anderson: Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Dtoro" type="button" class="btn btn-secondary-picture">Guillermo del Toro: The Shape of Water</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Guillermo del Toro</h3>
+      <h3>Personal: Guillermo del Torro</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Gretta Gerwig</h3>
+      <h3>Personal: Jordan Peele</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Costume Design</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "CDbeautyAndTheBeast" type="button" class="btn btn-secondary-picture">Beauty and the Beast</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CDdarkestHour" type="button" class="btn btn-secondary-picture">Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CDphantomThread" type="button" class="btn btn-secondary-picture">Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CDtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape Of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CDvictoriaAndAbdul" type="button" class="btn btn-secondary-picture">Victoria & Abdul</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Phantom Thread</h3>
+      <h3>Personal: Beauty and the Beast</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction:The Shape of Water </h3>
+      <h3>Personal: The Shape of Water</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Cinematography</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "CbladeRunner" type="button" class="btn btn-secondary-picture">Blade Runner 2049</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Cdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "CdarkestHour" type="button" class="btn btn-secondary-picture">Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "Cmudbound" type="button" class="btn btn-secondary-picture">Mudbound</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Blade Runner 2049</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: Blade Runner 2049</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Animated Feature Film</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "AFferdinand" type="button" class="btn btn-secondary-picture">Ferdinand</button>
+      <button onClick="reply_click(this.id); addScore()" id = "AFlovingVincent" type="button" class="btn btn-secondary-picture">Loving Vincent</button>
+      <button onClick="reply_click(this.id); addScore()" id = "AFbossBaby" type="button" class="btn btn-secondary-picture">Boss Baby</button>
+      <button onClick="reply_click(this.id); addScore()" id = "AFtheBreadwinner" type="button" class="btn btn-secondary-picture">The Breadwinner</button>
+      <button onClick="reply_click(this.id); addScore()" id = "AFcoco" type="button" class="btn btn-secondary-picture">Coco</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Coco </h3>
+      <h3>Personal: Coco</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Coco</h3>
+      <h3>Personal: Coco</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Actress in a Supporting Role</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTRESSblige" type="button" class="btn btn-secondary-picture">Mary J. Blige: Mudbound</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTRESSjanney" type="button" class="btn btn-secondary-picture">Allison Janney: I, Tonya</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTRESSmanville" type="button" class="btn btn-secondary-picture">Lesley Manville: Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTRESSmetcalf" type="button" class="btn btn-secondary-picture">Laurie Metcalf: Lady Bird</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTRESSspencer" type="button" class="btn btn-secondary-picture">Octavia Spencer: The Shape of Water</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Allison Janney</h3>
+      <h3>Personal: Laurie Metcalf</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Allison Janney</h3>
+      <h3>Personal: Laurie Metcalf</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Actor in a Supporting Role</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTORdafoe" type="button" class="btn btn-secondary-picture">Willem Dafor: The Florida Project</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTORharrelson" type="button" class="btn btn-secondary-picture">Woody Harrelson: Three Billboards</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTORjenkins" type="button" class="btn btn-secondary-picture">Richard Jenkins: The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTORplummer" type="button" class="btn btn-secondary-picture">Christopher Plumber: All the Money in the World</button>
+      <button onClick="reply_click(this.id); addScore()" id = "SACTORrockwell" type="button" class="btn btn-secondary-picture">Sam Rockwell: Three Billboards</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Sam Rockwell</h3>
+      <h3>Personal: Richard Jenkins</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Sam Rockwell</h3>
+      <h3>Personal: Richard Jenkins</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Actress in a Leading Role</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTRESShawkins" type="button" class="btn btn-secondary-picture">Sally Hawkins: The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTRESSmcdormand" type="button" class="btn btn-secondary-picture">Frances McDormand: Three Billboards</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTRESSrobbie" type="button" class="btn btn-secondary-picture">Margot Robbie: I, Tonya</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTRESSronan" type="button" class="btn btn-secondary-picture">Saoirse Ronan: Lady Bird</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTRESSstreep" type="button" class="btn btn-secondary-picture">Meryl Streep: The Post</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Frances McDormand</h3>
+      <h3>Personal: Saoirse Ronan</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Saoirse Ronan</h3>
+      <h3>Personal: Sally Hawkins</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Actor in a Leading Role</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTORchalamet" type="button" class="btn btn-secondary-picture">Timothee Chalamet: Call Me By Your Name</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTORlewis" type="button" class="btn btn-secondary-picture">Daniel Day-Lewis: Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTORkaluuya" type="button" class="btn btn-secondary-picture">Daniel Kaluuya: Get Out</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTORoldman" type="button" class="btn btn-secondary-picture">Gary Oldman: Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "LACTORwashington" type="button" class="btn btn-secondary-picture">Denzel Washington: Roman J. Israel, Esq.</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: Gary Oldman</h3>
+      <h3>Personal: Daniel Kaluuya</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: Timothee Chalamet</h3>
+      <h3>Personal: Daniel Kaluuya</h3>
+    </div>
+
+    <div class="btn-group-vertical mr-2" role="group" aria-label="First group">
+      <h2>Best Picture</h2>
+      <button onClick="reply_click(this.id); addScore()" id = "BPcallMe" type="button" class="btn btn-secondary-picture">Call Me by Your Name</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPdarkestHour" type="button" class="btn btn-secondary-picture">Darkest Hour</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPdunkirk" type="button" class="btn btn-secondary-picture">Dunkirk</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPgetOut" type="button" class="btn btn-secondary-picture">Get Out</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPladyBird" type="button" class="btn btn-secondary-picture">Lady Bird</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPphantomThread" type="button" class="btn btn-secondary-picture">Phantom Thread</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPthePost" type="button" class="btn btn-secondary-picture">The Post</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPtheShapeOfWater" type="button" class="btn btn-secondary-picture">The Shape of Water</button>
+      <button onClick="reply_click(this.id); addScore()" id = "BPthreeBillboards" type="button" class="btn btn-secondary-picture">Three Billboards</button>
+      <h3><strong>David</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: The Shape of Water</h3>
+
+
+      <h3><strong>Erin</strong></h3>
+      <h3>Prediction: The Shape of Water</h3>
+      <h3>Personal: Lady Bird</h3>
+    </div>
+
+
+
+  </main>
+
+
+  <script src = "app.js">
+
+  </script>
+  <!-- <script>
+  $(".winner").click(function() {
+    $(this).removeClass("winner");
+  });
+  </script> -->
+  <script>
+  $(".btn-secondary-picture").click(function() {
+  $(this).toggleClass("winner");
+});</script>
+
+
+  </body>
+</html>
